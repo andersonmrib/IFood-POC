@@ -1,4 +1,4 @@
-import streamlit as st #Python -m streamlit run app_gui.py
+import streamlit as st #to run the code: python -m streamlit run app_gui.py
 import os
 from dotenv import load_dotenv
 from langchain_chroma import Chroma
@@ -238,4 +238,5 @@ if question := st.chat_input("Digite sua dúvida (ex: cliente pediu reembolso ap
     st.session_state.messages.append({"role": "assistant", "content": response})
 
 # Rodapé simples
+
 st.markdown("<br><hr><center><small style='color: grey'>POC iFood GenAI - Uso Interno Confidencial</small></center>", unsafe_allow_html=True)
