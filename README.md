@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ### 4: Configurar Variáveis de Ambiente
 Crie um arquivo `.env` na raiz do projeto e insira sua chave da OpenAI:
 ```env
-OPENAI_KEY=sk-sua-chave-aqui
+OPENAI_KEY=coloque-sua-chave-aqui
 ```
 
 ---
