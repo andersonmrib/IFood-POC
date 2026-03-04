@@ -1,44 +1,70 @@
-# 🚀 Como Instalar e Rodar o Projeto
+# 🤖 [IFood - POC] - RAG Agent
 
-Este guia auxiliará na configuração do ambiente local para execução do Agente de IA com busca semântica.
+[![Python](https://img.shields.io/badge/Python-3.12-blue?style=flat-square&logo=python)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.29.0-red?style=flat-square&logo=streamlit)](https://streamlit.io/)
+[![LangChain](https://img.shields.io/badge/LangChain-0.1.137-green?style=flat-square)](https://www.langchain.com/)
+[![ChromaDB](https://img.shields.io/badge/ChromaDB-0.4.6-orange?style=flat-square)](https://www.trychroma.com/)
 
-# 1. Pré-requisitos
+**[Sistema para consulta de políticas do estabelecimento]**
 
-Certifique-se de ter o Python 3.9+ instalado em sua máquina.
+---
 
-# 2. Clonar o Repositório
+## 📋 Sobre o Projeto
 
-git clone [https://github.com/andersonmrib/IFood-POC](https://github.com/andersonmrib/IFood-POC)
-cd IFood-POC
+O **[IFood - POC]** é uma aplicação que utiliza **Retrieval-Augmented Generation (RAG)** para analisar políticas do estabelecimento. A solução combina busca semântica com IA generativa (OpenAI) para fornecer respostas precisas para as dúvidas dos clientes.
 
+## 🚀 Instalação
 
-# 3. Configurar o Ambiente Virtual
+### Pré-requisitos
+* Python 3.12+
+* Chave de API da OpenAI
+* Gerenciador de pacotes `pip`
 
-É altamente recomendável o uso de um ambiente isolado:
+### 1: Clonar o Repositório
+```bash
+git clone <url-do-seu-repositorio>
+cd <nome-da-pasta>
+```
 
+### 2: Configurar Ambiente Virtual
+```bash
 python -m venv venv
+# Linux/Mac
+source venv/bin/activate  
+# Windows
+venv\Scripts\activate  
+```
 
-No Windows:
-.\venv\Scripts\activate
-
-No Linux/Mac:
-source venv/bin/activate
-
-
-# 4. Instalar Dependências
-
+### 3: Instalar Dependências
+```bash
 pip install -r requirements.txt
+```
 
+### 4: Configurar Variáveis de Ambiente
+Crie um arquivo `.env` na raiz do projeto e insira suas configurações:
+```env
+OPENAI_KEY=sk-sua-chave-aqui
+DOCUMENT_PATH=data/raw/politicas.csv
+CHROMA_PATH=data/chroma_db_data
+```
 
-# 5. Configurar Variáveis de Ambiente
+---
 
-Crie um arquivo .env na raiz do projeto e adicione sua chave da API:
+## 💻 Como Utilizar
 
-OPENAI_API_KEY=sua_chave_aqui
+### 1. Ingestão de Dados (Vector DB)
+Processe o documento de políticas para criar a base de conhecimento da IA:
+```bash
+python ingestion.py
+```
 
-
-# 6. Executar a Aplicação
-
-O projeto utiliza Streamlit para a interface. Para iniciar:
-
+### 2. Iniciar a Interface
+Execute o dashboard do Streamlit:
+```bash
 streamlit run app.py
+```
+Acesse no seu navegador.
+
+
+## 📄 Licença
+Este projeto é uma Prova de Conceito (POC) para fins de demonstração técnica e estudo.
