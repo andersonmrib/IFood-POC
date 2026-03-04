@@ -18,10 +18,10 @@ cd IFood-POC
 
 python -m venv venv
 
-# No Windows:
+No Windows:
 .\venv\Scripts\activate
 
-# No Linux/Mac:
+No Linux/Mac:
 source venv/bin/activate
 
 
