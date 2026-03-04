@@ -1,4 +1,4 @@
-# 🤖 [IFood - POC] - RAG Agent
+# [IFood - POC] - RAG Agent
 
 [![Python](https://img.shields.io/badge/Python-3.12-blue?style=flat-square&logo=python)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.29.0-red?style=flat-square&logo=streamlit)](https://streamlit.io/)
